@@ -20,6 +20,18 @@ function renderSummary(data) {
 
   const prices = data.products.map((p) => p.price).filter((p) => Number.isFinite(p));
   lowestPrice.textContent = prices.length ? formatPrice(Math.min(...prices)) : '-';
+
+  const filterDetails = document.getElementById('filterDetails');
+  if (filterDetails && data.filters_applied) {
+    const filters = data.filters_applied;
+    const chunks = [
+      filters.size_inch ? `${filters.size_inch}인치` : null,
+      Array.isArray(filters.resolution_tokens) ? `해상도 키워드: ${filters.resolution_tokens.join(', ')}` : null,
+      Array.isArray(filters.required_ports) ? `포트: ${filters.required_ports.join(', ')}` : null,
+      Array.isArray(filters.queries) ? `검색어: ${filters.queries.join(' / ')}` : null,
+    ].filter(Boolean);
+    filterDetails.textContent = chunks.length ? chunks.join(' · ') : '기준 정보 없음';
+  }
 }
 
 function renderList(products) {
@@ -36,9 +48,11 @@ function renderList(products) {
     const node = template.content.cloneNode(true);
     node.querySelector('.name').textContent = product.name;
     node.querySelector('.meta').textContent = [
+      product.brand || null,
       product.size_inch ? `${product.size_inch}인치` : null,
       product.resolution || null,
       product.usb_c_pd_watt ? `USB-C PD ${product.usb_c_pd_watt}W` : 'USB-C 정보 없음',
+      product.vesa_mount_mm ? `VESA ${product.vesa_mount_mm}mm` : 'VESA 정보 없음',
     ]
       .filter(Boolean)
       .join(' · ');
