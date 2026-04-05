@@ -9,7 +9,9 @@
       "size_inch": 27,
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
-      "url": "https://prod.danawa.com/info/?pcode=86517662&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757"
+      "url": "https://prod.danawa.com/info/?pcode=86517662&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757",
+      "brand": "크로스오버",
+      "vesa_mount_mm": null
     },
     {
       "name": "크로스오버 27USW9 UHD 4K -iPS USB-C 화이트 무결점",
@@ -17,7 +19,9 @@
       "size_inch": 27,
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
-      "url": "https://prod.danawa.com/info/?pcode=86537804&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757"
+      "url": "https://prod.danawa.com/info/?pcode=86537804&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757",
+      "brand": "크로스오버",
+      "vesa_mount_mm": null
     },
     {
       "name": "알파스캔 2726UC 4K UHD USB-C 화이트 보더리스 IPS 시력보호 HDR 무결점",
@@ -25,7 +29,9 @@
       "size_inch": 27,
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
-      "url": "https://prod.danawa.com/info/?pcode=104307404&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757"
+      "url": "https://prod.danawa.com/info/?pcode=104307404&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757",
+      "brand": "알파스캔",
+      "vesa_mount_mm": null
     },
     {
       "name": "알파스캔 AOC U27B3C 4K UHD USB-C 높낮이 HDR 무결점",
@@ -33,7 +39,9 @@
       "size_inch": 27,
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
-      "url": "https://prod.danawa.com/info/?pcode=71502629&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757"
+      "url": "https://prod.danawa.com/info/?pcode=71502629&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757",
+      "brand": "알파스캔",
+      "vesa_mount_mm": null
     },
     {
       "name": "알파스캔 콘퀘스트 27U60G 게이밍 4K UHD 160 FAST IPS USB-C HDR 멀티스탠드 무결점",
@@ -41,7 +49,29 @@
       "size_inch": 27,
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
-      "url": "https://prod.danawa.com/info/?pcode=102125936&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757"
+      "url": "https://prod.danawa.com/info/?pcode=102125936&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757",
+      "brand": "알파스캔",
+      "vesa_mount_mm": null
+    },
+    {
+      "name": "삼성전자 ViewFinity S8 S27B800U 27인치 4K USB-C",
+      "brand": "Samsung",
+      "price": 489000,
+      "size_inch": 27,
+      "resolution": "3840x2160",
+      "usb_c_pd_watt": 90,
+      "vesa_mount_mm": "100x100",
+      "url": "https://search.danawa.com/dsearch.php?k1=%EC%82%BC%EC%84%B1+S27B800U"
+    },
+    {
+      "name": "LG전자 울트라파인 27UP850N 27인치 4K USB-C",
+      "brand": "LG",
+      "price": 549000,
+      "size_inch": 27,
+      "resolution": "3840x2160",
+      "usb_c_pd_watt": 96,
+      "vesa_mount_mm": "100x100",
+      "url": "https://search.danawa.com/dsearch.php?k1=LG+27UP850N"
     },
     {
       "name": "알파스캔 AOC U27U3XD 크리에이터 프로 4K UHD 딥 블랙 IPS 듀얼 모드 USB-C 멀티스탠드 무결점",
@@ -49,7 +79,19 @@
       "size_inch": 27,
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
-      "url": "https://prod.danawa.com/info/?pcode=108398837&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757"
+      "url": "https://prod.danawa.com/info/?pcode=108398837&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757",
+      "brand": "알파스캔",
+      "vesa_mount_mm": null
+    },
+    {
+      "name": "LG전자 울트라파인 27UN880 27인치 4K USB-C Ergo",
+      "brand": "LG",
+      "price": 699000,
+      "size_inch": 27,
+      "resolution": "3840x2160",
+      "usb_c_pd_watt": 60,
+      "vesa_mount_mm": "100x100",
+      "url": "https://search.danawa.com/dsearch.php?k1=LG+27UN880"
     },
     {
       "name": "알파스캔 에이건 AGON 276UZD 게이밍 UHD OLED 240 USB-C HDR 400 무결점",
@@ -57,7 +99,30 @@
       "size_inch": 27,
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
-      "url": "https://prod.danawa.com/info/?pcode=99050288&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757"
+      "url": "https://prod.danawa.com/info/?pcode=99050288&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757",
+      "brand": "알파스캔",
+      "vesa_mount_mm": null
     }
-  ]
+  ],
+  "queries": [
+    "27인치 4k usb-c 모니터",
+    "삼성 27인치 4k usb-c 모니터",
+    "LG 27인치 4k usb-c 모니터"
+  ],
+  "filters_applied": {
+    "size_inch": 27,
+    "resolution_tokens": [
+      "4k",
+      "uhd",
+      "3840x2160"
+    ],
+    "required_ports": [
+      "usb-c 또는 type-c"
+    ],
+    "queries": [
+      "27인치 4k usb-c 모니터",
+      "삼성 27인치 4k usb-c 모니터",
+      "LG 27인치 4k usb-c 모니터"
+    ]
+  }
 }
