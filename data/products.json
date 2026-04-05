@@ -1,0 +1,22 @@
+{
+  "updated_at": "2026-04-05T00:00:00Z",
+  "query": "27인치 4k usb-c 모니터",
+  "products": [
+    {
+      "name": "샘플 27인치 4K USB-C 모니터 A",
+      "price": 499000,
+      "size_inch": 27,
+      "resolution": "3840x2160",
+      "usb_c_pd_watt": 65,
+      "url": "https://search.danawa.com/"
+    },
+    {
+      "name": "샘플 27인치 4K USB-C 모니터 B",
+      "price": 569000,
+      "size_inch": 27,
+      "resolution": "3840x2160",
+      "usb_c_pd_watt": 90,
+      "url": "https://search.danawa.com/"
+    }
+  ]
+}
