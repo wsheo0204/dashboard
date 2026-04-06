@@ -44,6 +44,21 @@ class ParserTests(unittest.TestCase):
         html = '<script type="application/ld+json">{"image":"https:\\/\\/cdn.example.com\\/json.jpg"}</script>'
         self.assertEqual(fetch_danawa.parse_image_url(html), "https://cdn.example.com/json.jpg")
 
+    def test_parse_image_url_resolves_relative_path_with_base_url(self):
+        html = '<meta property="og:image" content="/images/product-main.jpg" />'
+        self.assertEqual(
+            fetch_danawa.parse_image_url(html, base_url="https://prod.danawa.com/info/?pcode=123"),
+            "https://prod.danawa.com/images/product-main.jpg",
+        )
+
+    def test_parse_detail_specs_resolves_body_image_relative_path(self):
+        html = '<img class="prod_img" src="../img/main.jpg" />'
+        _, _, image_url = fetch_danawa.parse_detail_specs(
+            html,
+            base_url="https://prod.danawa.com/info/?pcode=123",
+        )
+        self.assertEqual(image_url, "https://prod.danawa.com/img/main.jpg")
+
 
 if __name__ == "__main__":
     unittest.main()

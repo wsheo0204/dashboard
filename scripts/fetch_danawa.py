@@ -35,7 +35,9 @@ def fetch_html(url: str) -> str:
         return resp.read().decode("utf-8", errors="ignore")
 
 
-def normalize_url(url: str) -> str:
+def normalize_url(url: str, base_url: str | None = None) -> str:
+    if base_url:
+        return urllib.parse.urljoin(base_url, url)
     if url.startswith("//"):
         return "https:" + url
     return url
@@ -118,13 +120,13 @@ def parse_vesa_mount(spec_text: str) -> str | None:
     return f"{match.group(1)}x{match.group(2)}"
 
 
-def parse_image_url(detail_html: str) -> str | None:
+def parse_image_url(detail_html: str, base_url: str | None = None) -> str | None:
     # 1) Meta tags (og:image, twitter:image, itemprop=image) with attribute-order invariance.
     for meta_match in re.finditer(r"<meta\s+[^>]*>", detail_html, flags=re.IGNORECASE):
         attrs = parse_tag_attributes(meta_match.group(0))
         key = (attrs.get("property") or attrs.get("name") or attrs.get("itemprop") or "").lower()
         if key in {"og:image", "twitter:image", "image"} and attrs.get("content"):
-            return normalize_url(html.unescape(attrs["content"].strip()))
+            return normalize_url(html.unescape(attrs["content"].strip()), base_url=base_url)
 
     # 2) Common image declarations beyond meta tags.
     for pattern in [
@@ -133,7 +135,7 @@ def parse_image_url(detail_html: str) -> str | None:
     ]:
         match = re.search(pattern, detail_html, flags=re.IGNORECASE)
         if match:
-            return normalize_url(html.unescape(match.group(1).replace("\\/", "/").strip()))
+            return normalize_url(html.unescape(match.group(1).replace("\\/", "/").strip()), base_url=base_url)
 
     # 3) Representative product images in body.
     image_patterns = [
@@ -146,7 +148,7 @@ def parse_image_url(detail_html: str) -> str | None:
         if match:
             url = match.group(1).strip()
             if url and not url.startswith("data:"):
-                return normalize_url(html.unescape(url))
+                return normalize_url(html.unescape(url), base_url=base_url)
     return None
 
 
@@ -216,7 +218,7 @@ def parse_pd_from_structured_specs(specs: dict[str, str]) -> int | None:
     return None
 
 
-def parse_detail_specs(detail_html: str) -> tuple[int | None, str | None, str | None]:
+def parse_detail_specs(detail_html: str, base_url: str | None = None) -> tuple[int | None, str | None, str | None]:
     specs = extract_structured_specs(detail_html)
     specs.update(extract_mobile_specs(detail_html))
     detail_text = text_of(detail_html).lower()
@@ -247,7 +249,7 @@ def parse_detail_specs(detail_html: str) -> tuple[int | None, str | None, str | 
     if vesa_mount_mm is None:
         vesa_mount_mm = parse_vesa_mount(detail_text)
 
-    image_url = parse_image_url(detail_html)
+    image_url = parse_image_url(detail_html, base_url=base_url)
     return usb_c_pd_watt, vesa_mount_mm, image_url
 
 
@@ -314,7 +316,7 @@ def enrich_products_with_detail(products: list[dict]) -> list[dict]:
         if url not in detail_cache:
             try:
                 detail_html = fetch_html(url)
-                detail_cache[url] = parse_detail_specs(detail_html)
+                detail_cache[url] = parse_detail_specs(detail_html, base_url=url)
             except Exception as exc:
                 logger.warning("Detail parsing failed name=%s url=%s err=%s", product.get("name"), url, exc)
                 detail_cache[url] = (None, None, None)
