@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-06T13:13:04+00:00",
+  "updated_at": "2026-04-06T19:01:32+00:00",
   "query": "27인치 4k usb-c 모니터",
   "queries": [
     "27인치 4k usb-c 모니터",
@@ -55,7 +55,7 @@
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
       "url": "https://prod.danawa.com/info/?pcode=104307404&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757",
-      "image_url": "https://img.danuri.io/catalog-image/404/307/104/0a91646a894149e9af9a8336f289c886.jpg?shrink=160:160&_v=20260406172817"
+      "image_url": "https://img.danuri.io/catalog-image/404/307/104/0a91646a894149e9af9a8336f289c886.jpg?shrink=160:160&_v=20260407002642"
     },
     {
       "name": "알파스캔 AOC U27B3C 4K UHD USB-C 높낮이 HDR 무결점",
@@ -87,7 +87,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14885&cate_c4=0&cmpny_c=EE128&link_prod_c=4308189515&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811497027&cate=113976",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14885&cate_c4=0&cmpny_c=EE128&link_prod_c=4308189515&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020583045&cate=113976",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -109,7 +109,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": 27,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TP40F&link_prod_c=I26417481122&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811558499",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TP40F&link_prod_c=I26417481122&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020646078",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -120,18 +120,18 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9184116931&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811559297",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9184116931&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020645619",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
       "name": "[해외] LG 27UQ850V-W Black 4K 98%USB Type-C(USB Power Delivery 모니터 디스플레이 27인치 IPS",
       "brand": "LG",
-      "price": 749240,
+      "price": 749460,
       "size_inch": 27,
       "resolution": "3840x2160",
       "usb_c_pd_watt": 27,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TP40F&link_prod_c=I26174673996&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811559053",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TP40F&link_prod_c=I26174673996&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020641038",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -142,7 +142,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=8353278063&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811556869",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=8353278063&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020641748",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -153,7 +153,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195336383&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811491388",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195336383&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020588920",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -164,7 +164,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TH201&link_prod_c=9195340147&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811559659&cate=112757",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TH201&link_prod_c=9195340147&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020644561&cate=112757",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -175,7 +175,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=880&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I28068570717&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811499640&cate=112777",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=880&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I28068570717&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020588043&cate=112777",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -186,7 +186,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": 26,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195344481&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811555875",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195344481&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020643014",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -208,7 +208,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195336574&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811559964",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195336574&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020645022",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -219,7 +219,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TP40F&link_prod_c=V94951581570&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811557503",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TP40F&link_prod_c=V94951581570&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020642877",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -230,7 +230,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9241830546&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811491075",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9241830546&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020588020",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -241,7 +241,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": 112,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=9168033690&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811559807",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=9168033690&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020648294",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -252,7 +252,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=9218634835&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811553252",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=9218634835&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020643204",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -263,7 +263,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9163387358&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811498857",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9163387358&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020585449",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -274,7 +274,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TH201&link_prod_c=9177142588&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811554751&cate=112757",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TH201&link_prod_c=9177142588&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020641787&cate=112757",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -285,7 +285,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9082983183&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17754811494993",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9082983183&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17755020588827",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     }
   ]
