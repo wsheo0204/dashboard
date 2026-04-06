@@ -46,6 +46,7 @@ function renderList(products) {
 
   products.forEach((product) => {
     const node = template.content.cloneNode(true);
+    const thumb = node.querySelector('.thumb');
     node.querySelector('.name').textContent = product.name;
     node.querySelector('.meta').textContent = [
       product.brand || null,
@@ -57,6 +58,12 @@ function renderList(products) {
       .filter(Boolean)
       .join(' · ');
     node.querySelector('.price').textContent = formatPrice(product.price);
+    if (product.image_url) {
+      thumb.src = product.image_url;
+      thumb.alt = `${product.name} 이미지`;
+    } else {
+      thumb.remove();
+    }
     const link = node.querySelector('.link');
     link.href = product.url;
     list.appendChild(node);

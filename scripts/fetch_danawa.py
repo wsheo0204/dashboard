@@ -7,6 +7,7 @@ This script is designed for GitHub Actions.
 from __future__ import annotations
 
 import datetime as dt
+import html
 import json
 import re
 import urllib.parse
@@ -26,6 +27,12 @@ def fetch_html(url: str) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=30) as resp:
         return resp.read().decode("utf-8", errors="ignore")
+
+
+def normalize_url(url: str) -> str:
+    if url.startswith("//"):
+        return "https:" + url
+    return url
 
 
 def text_of(html_snippet: str) -> str:
@@ -81,6 +88,27 @@ def parse_vesa_mount(spec_text: str) -> str | None:
     return f"{match.group(1)}x{match.group(2)}"
 
 
+def parse_image_url(detail_html: str) -> str | None:
+    patterns = [
+        r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"',
+        r'<meta[^>]+name="twitter:image"[^>]+content="([^"]+)"',
+        r'<img[^>]+class="[^"]*(?:big_img|prod_img)[^"]*"[^>]+src="([^"]+)"',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, detail_html, flags=re.IGNORECASE)
+        if match:
+            return normalize_url(html.unescape(match.group(1).strip()))
+    return None
+
+
+def parse_detail_specs(detail_html: str) -> tuple[int | None, str | None, str | None]:
+    detail_text = text_of(detail_html).lower()
+    usb_c_pd_watt = parse_usb_c_pd_watt(detail_text)
+    vesa_mount_mm = parse_vesa_mount(detail_text)
+    image_url = parse_image_url(detail_html)
+    return usb_c_pd_watt, vesa_mount_mm, image_url
+
+
 def parse_products(html: str) -> list[dict]:
     items = []
     blocks = re.findall(r'(<li[^>]+class="[^"]*prod_item[^"]*"[\s\S]*?</li>)', html)
@@ -121,7 +149,7 @@ def parse_products(html: str) -> list[dict]:
                 "resolution": "3840x2160",
                 "usb_c_pd_watt": usb_c_pd_watt,
                 "vesa_mount_mm": vesa_mount_mm,
-                "url": url,
+                "url": normalize_url(url),
             }
         )
 
@@ -130,6 +158,32 @@ def parse_products(html: str) -> list[dict]:
         dedup[item["name"]] = item
 
     return sorted(dedup.values(), key=lambda x: x["price"])
+
+
+def enrich_products_with_detail(products: list[dict]) -> list[dict]:
+    detail_cache: dict[str, tuple[int | None, str | None, str | None]] = {}
+
+    for product in products:
+        url = product.get("url")
+        if not isinstance(url, str) or not url:
+            product["image_url"] = None
+            continue
+
+        if url not in detail_cache:
+            try:
+                detail_html = fetch_html(url)
+                detail_cache[url] = parse_detail_specs(detail_html)
+            except Exception:
+                detail_cache[url] = (None, None, None)
+
+        detail_pd, detail_vesa, detail_image = detail_cache[url]
+        if detail_pd is not None:
+            product["usb_c_pd_watt"] = detail_pd
+        if detail_vesa is not None:
+            product["vesa_mount_mm"] = detail_vesa
+        product["image_url"] = detail_image
+
+    return products
 
 
 def main() -> int:
@@ -145,6 +199,7 @@ def main() -> int:
     for product in all_products:
         dedup[product["name"]] = product
     products = sorted(dedup.values(), key=lambda x: x["price"])
+    products = enrich_products_with_detail(products)
 
     payload = {
         "updated_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),
