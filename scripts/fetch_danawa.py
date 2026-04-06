@@ -23,6 +23,7 @@ QUERIES = [
 OUTPUT = Path(__file__).resolve().parents[1] / "data" / "products.json"
 USER_AGENT = "Mozilla/5.0 (compatible; dashboard-bot/1.0)"
 logger = logging.getLogger("fetch_danawa")
+DOMESTIC_EXCLUDE_KEYWORDS = ["해외", "해외구매", "직구", "병행수입", "관부가세"]
 
 
 def configure_logging() -> None:
@@ -218,9 +219,26 @@ def parse_pd_from_structured_specs(specs: dict[str, str]) -> int | None:
     return None
 
 
+def extract_script_json_specs(detail_html: str) -> dict[str, str]:
+    specs: dict[str, str] = {}
+    for script_body in re.findall(r"<script[^>]*>([\s\S]*?)</script>", detail_html, flags=re.IGNORECASE):
+        for raw_key, raw_val in re.findall(
+            r'"([^"\\]*(?:\\.[^"\\]*)*)"\s*:\s*"([^"\\]*(?:\\.[^"\\]*)*)"',
+            script_body,
+        ):
+            key = text_of(html.unescape(raw_key)).lower()
+            value = text_of(html.unescape(raw_val))
+            if not key or not value:
+                continue
+            if any(token in f"{key} {value.lower()}" for token in ["usb", "type-c", "pd", "충전", "vesa", "베사"]):
+                specs.setdefault(key, value)
+    return specs
+
+
 def parse_detail_specs(detail_html: str, base_url: str | None = None) -> tuple[int | None, str | None, str | None]:
     specs = extract_structured_specs(detail_html)
     specs.update(extract_mobile_specs(detail_html))
+    specs.update(extract_script_json_specs(detail_html))
     detail_text = text_of(detail_html).lower()
 
     # PD parsing priority:
@@ -270,6 +288,9 @@ def parse_products(html: str) -> list[dict]:
 
         # Product spec text frequently appears in prod_spec_set and ext columns.
         spec_text = text_of(block).lower()
+
+        if any(keyword in spec_text for keyword in DOMESTIC_EXCLUDE_KEYWORDS):
+            continue
 
         if "27" not in spec_text:
             continue
