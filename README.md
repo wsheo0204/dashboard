@@ -1,11 +1,11 @@
 # 돈쓸것 Dashboard
 
 27인치 / 4K / USB-C 충전 가능한 모니터를 다나와 검색 결과에서 필터링해서 보여주는 정적 웹 대시보드입니다.
-기본 검색어 외에 삼성/LG 검색어도 함께 수집하며, USB-C PD(W)와 VESA 마운트 정보가 있으면 같이 표시합니다.
+기본 검색어 외에 삼성/LG 검색어도 함께 수집하며, 각 상품 상세 페이지까지 조회해 USB-C PD(W), VESA 마운트, 상품 이미지를 표시합니다.
 
 ## 동작 방식
 
-- `scripts/fetch_danawa.py`가 다나와 검색 페이지를 수집해 `data/products.json`을 생성합니다.
+- `scripts/fetch_danawa.py`가 다나와 검색 페이지를 수집한 뒤, 각 상품 상세 페이지를 추가 조회해 `data/products.json`을 생성합니다.
 - GitHub Actions가 6시간마다 데이터를 갱신합니다.
 - 정적 페이지(`index.html`)는 `data/products.json`만 읽어 화면에 표시합니다.
 
