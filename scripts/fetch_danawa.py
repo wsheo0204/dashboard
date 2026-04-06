@@ -86,9 +86,9 @@ def parse_usb_c_pd_watt(spec_text: str) -> int | None:
         "ac",
     ]
     patterns = [
-        r"(?:usb[\s\-]?c|type[\s\-]?c)\D{0,30}(?:pd|power\s*delivery|충전)\D{0,12}(\d{2,3})\s*w",
-        r"(?:pd|power\s*delivery)\D{0,15}(\d{2,3})\s*w",
-        r"(?:충전\s*출력|충전)\D{0,8}(\d{2,3})\s*w",
+        r"(?:usb[\s\-]?c|type[\s\-]?c)\D{0,30}(?:pd|power\s*delivery|충전)\D{0,12}(\d{2,3})\s*(?:w|와트)?",
+        r"(?:pd|power\s*delivery|usb\s*pd)\D{0,15}(\d{2,3})\s*(?:w|와트)?",
+        r"(?:충전\s*출력|충전)\D{0,12}(\d{2,3})\s*(?:w|와트)?",
     ]
 
     lowered = spec_text.lower()
@@ -119,18 +119,27 @@ def parse_vesa_mount(spec_text: str) -> str | None:
 
 
 def parse_image_url(detail_html: str) -> str | None:
-    # 1) Meta tags (og:image, twitter:image) with attribute-order invariance.
+    # 1) Meta tags (og:image, twitter:image, itemprop=image) with attribute-order invariance.
     for meta_match in re.finditer(r"<meta\s+[^>]*>", detail_html, flags=re.IGNORECASE):
         attrs = parse_tag_attributes(meta_match.group(0))
-        key = (attrs.get("property") or attrs.get("name") or "").lower()
-        if key in {"og:image", "twitter:image"} and attrs.get("content"):
+        key = (attrs.get("property") or attrs.get("name") or attrs.get("itemprop") or "").lower()
+        if key in {"og:image", "twitter:image", "image"} and attrs.get("content"):
             return normalize_url(html.unescape(attrs["content"].strip()))
 
-    # 2) Representative product images in body.
+    # 2) Common image declarations beyond meta tags.
+    for pattern in [
+        r'<link[^>]+rel=[\'"](?:image_src|preload)[\"][^>]+href=[\'"]([^\'"]+)[\'"]',
+        r'"image"\s*:\s*"(https?:\\/\\/[^"]+|\\/\\/[^"]+)"',
+    ]:
+        match = re.search(pattern, detail_html, flags=re.IGNORECASE)
+        if match:
+            return normalize_url(html.unescape(match.group(1).replace("\\/", "/").strip()))
+
+    # 3) Representative product images in body.
     image_patterns = [
-        r'<img[^>]+class=[\'"][^\'"]*(?:big_img|prod_img|thumb|photo)[^\'"]*[\'"][^>]+(?:src|data-src)=[\'"]([^\'"]+)[\'"]',
-        r'<img[^>]+(?:id|class)=[\'"][^\'"]*(?:product|main)[^\'"]*[\'"][^>]+(?:src|data-src)=[\'"]([^\'"]+)[\'"]',
-        r'<img[^>]+(?:src|data-src)=[\'"]([^\'"]+)[\'"]',
+        r'<img[^>]+class=[\'"][^\'"]*(?:big_img|prod_img|thumb|photo|swiper-lazy)[^\'"]*[\'"][^>]+(?:src|data-src|data-original|data-lazy)=[\'"]([^\'"]+)[\'"]',
+        r'<img[^>]+(?:id|class)=[\'"][^\'"]*(?:product|main|represent)[^\'"]*[\'"][^>]+(?:src|data-src|data-original|data-lazy)=[\'"]([^\'"]+)[\'"]',
+        r'<img[^>]+(?:src|data-src|data-original|data-lazy)=[\'"]([^\'"]+)[\'"]',
     ]
     for pattern in image_patterns:
         match = re.search(pattern, detail_html, flags=re.IGNORECASE)
@@ -164,6 +173,30 @@ def extract_structured_specs(detail_html: str) -> dict[str, str]:
     return specs
 
 
+
+
+def extract_mobile_specs(detail_html: str) -> dict[str, str]:
+    specs: dict[str, str] = {}
+
+    patterns = [
+        re.compile(
+            r'<li[^>]*>\s*<span[^>]*class=[\'"][^\'"]*(?:tit|title|name)[^\'"]*[\'"][^>]*>(.*?)</span>\s*<span[^>]*class=[\'"][^\'"]*(?:txt|value|desc)[^\'"]*[\'"][^>]*>(.*?)</span>',
+            flags=re.IGNORECASE | re.DOTALL,
+        ),
+        re.compile(
+            r'<div[^>]*class=[\'"][^\'"]*(?:spec|info)[^\'"]*[\'"][^>]*>\s*<span[^>]*>(.*?)</span>\s*<span[^>]*>(.*?)</span>',
+            flags=re.IGNORECASE | re.DOTALL,
+        ),
+    ]
+
+    for pattern in patterns:
+        for key_html, value_html in pattern.findall(detail_html):
+            key = text_of(key_html).lower()
+            value = text_of(value_html)
+            if key and value and key not in specs:
+                specs[key] = value
+    return specs
+
 def parse_pd_from_structured_specs(specs: dict[str, str]) -> int | None:
     key_priority = [
         "usb-c pd",
@@ -185,6 +218,7 @@ def parse_pd_from_structured_specs(specs: dict[str, str]) -> int | None:
 
 def parse_detail_specs(detail_html: str) -> tuple[int | None, str | None, str | None]:
     specs = extract_structured_specs(detail_html)
+    specs.update(extract_mobile_specs(detail_html))
     detail_text = text_of(detail_html).lower()
 
     # PD parsing priority:
