@@ -47,6 +47,7 @@ function renderList(products) {
   products.forEach((product) => {
     const node = template.content.cloneNode(true);
     const thumb = node.querySelector('.thumb');
+    const placeholder = node.querySelector('.thumb-placeholder');
     node.querySelector('.name').textContent = product.name;
     node.querySelector('.meta').textContent = [
       product.brand || null,
@@ -61,8 +62,16 @@ function renderList(products) {
     if (product.image_url) {
       thumb.src = product.image_url;
       thumb.alt = `${product.name} 이미지`;
+      thumb.hidden = false;
+      placeholder.hidden = true;
+      thumb.onerror = () => {
+        thumb.hidden = true;
+        placeholder.hidden = false;
+      };
     } else {
-      thumb.remove();
+      thumb.hidden = true;
+      placeholder.hidden = false;
+      thumb.alt = `${product.name} 이미지 없음`;
     }
     const link = node.querySelector('.link');
     link.href = product.url;

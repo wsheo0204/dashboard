@@ -50,7 +50,10 @@
 
     <template id="itemTemplate">
       <article class="item">
-        <img class="thumb" alt="" loading="lazy" />
+        <div class="thumb-shell">
+          <img class="thumb" alt="" loading="lazy" />
+          <div class="thumb-placeholder" aria-hidden="true">이미지 없음</div>
+        </div>
         <h3 class="name"></h3>
         <div class="meta"></div>
         <div class="price"></div>

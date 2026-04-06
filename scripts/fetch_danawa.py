@@ -9,6 +9,7 @@ from __future__ import annotations
 import datetime as dt
 import html
 import json
+import logging
 import re
 import urllib.parse
 import urllib.request
@@ -21,6 +22,11 @@ QUERIES = [
 ]
 OUTPUT = Path(__file__).resolve().parents[1] / "data" / "products.json"
 USER_AGENT = "Mozilla/5.0 (compatible; dashboard-bot/1.0)"
+logger = logging.getLogger("fetch_danawa")
+
+
+def configure_logging() -> None:
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
 
 def fetch_html(url: str) -> str:
@@ -66,18 +72,42 @@ def detect_brand(name: str) -> str:
 
 
 def parse_usb_c_pd_watt(spec_text: str) -> int | None:
-    patterns = [
-        r"(?:pd|power\s*delivery)\D{0,12}(\d{2,3})\s*w",
-        r"usb[\s\-]?c\D{0,12}(\d{2,3})\s*w",
-        r"type[\s\-]?c\D{0,12}(\d{2,3})\s*w",
+    invalid_nearby_keywords = [
+        "소비전력",
+        "정격",
+        "어댑터",
+        "출력 전력",
+        "입력 전력",
+        "전력소모",
+        "소모전력",
+        "소비 파워",
+        "power consumption",
+        "adapter",
+        "ac",
     ]
+    patterns = [
+        r"(?:usb[\s\-]?c|type[\s\-]?c)\D{0,30}(?:pd|power\s*delivery|충전)\D{0,12}(\d{2,3})\s*w",
+        r"(?:pd|power\s*delivery)\D{0,15}(\d{2,3})\s*w",
+        r"(?:충전\s*출력|충전)\D{0,8}(\d{2,3})\s*w",
+    ]
+
+    lowered = spec_text.lower()
     for pattern in patterns:
-        match = re.search(pattern, spec_text)
-        if match:
+        for match in re.finditer(pattern, lowered):
             try:
-                return int(match.group(1))
+                watt = int(match.group(1))
             except ValueError:
                 continue
+
+            if not (10 <= watt <= 240):
+                continue
+
+            start, end = match.span()
+            nearby = lowered[max(0, start - 30) : min(len(lowered), end + 30)]
+            if any(keyword in nearby for keyword in invalid_nearby_keywords):
+                continue
+
+            return watt
     return None
 
 
@@ -89,22 +119,100 @@ def parse_vesa_mount(spec_text: str) -> str | None:
 
 
 def parse_image_url(detail_html: str) -> str | None:
-    patterns = [
-        r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"',
-        r'<meta[^>]+name="twitter:image"[^>]+content="([^"]+)"',
-        r'<img[^>]+class="[^"]*(?:big_img|prod_img)[^"]*"[^>]+src="([^"]+)"',
+    # 1) Meta tags (og:image, twitter:image) with attribute-order invariance.
+    for meta_match in re.finditer(r"<meta\s+[^>]*>", detail_html, flags=re.IGNORECASE):
+        attrs = parse_tag_attributes(meta_match.group(0))
+        key = (attrs.get("property") or attrs.get("name") or "").lower()
+        if key in {"og:image", "twitter:image"} and attrs.get("content"):
+            return normalize_url(html.unescape(attrs["content"].strip()))
+
+    # 2) Representative product images in body.
+    image_patterns = [
+        r'<img[^>]+class=[\'"][^\'"]*(?:big_img|prod_img|thumb|photo)[^\'"]*[\'"][^>]+(?:src|data-src)=[\'"]([^\'"]+)[\'"]',
+        r'<img[^>]+(?:id|class)=[\'"][^\'"]*(?:product|main)[^\'"]*[\'"][^>]+(?:src|data-src)=[\'"]([^\'"]+)[\'"]',
+        r'<img[^>]+(?:src|data-src)=[\'"]([^\'"]+)[\'"]',
     ]
-    for pattern in patterns:
+    for pattern in image_patterns:
         match = re.search(pattern, detail_html, flags=re.IGNORECASE)
         if match:
-            return normalize_url(html.unescape(match.group(1).strip()))
+            url = match.group(1).strip()
+            if url and not url.startswith("data:"):
+                return normalize_url(html.unescape(url))
+    return None
+
+
+def parse_tag_attributes(tag_html: str) -> dict[str, str]:
+    attrs: dict[str, str] = {}
+    for key, _, value in re.findall(r'([a-zA-Z_:][\w:.-]*)\s*=\s*([\'"])(.*?)\2', tag_html):
+        attrs[key.lower()] = value
+    return attrs
+
+
+def extract_structured_specs(detail_html: str) -> dict[str, str]:
+    specs: dict[str, str] = {}
+    row_pattern = re.compile(
+        r"<(?:tr|li)[^>]*>\s*(?:<th[^>]*>|<dt[^>]*>|<strong[^>]*>)(.*?)</(?:th|dt|strong)>"
+        r"\s*(?:<td[^>]*>|<dd[^>]*>|<span[^>]*>)(.*?)</(?:td|dd|span)>",
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+
+    for key_html, value_html in row_pattern.findall(detail_html):
+        key = text_of(key_html).lower()
+        value = text_of(value_html)
+        if key and value:
+            specs[key] = value
+    return specs
+
+
+def parse_pd_from_structured_specs(specs: dict[str, str]) -> int | None:
+    key_priority = [
+        "usb-c pd",
+        "pd 충전",
+        "power delivery",
+        "usb-c",
+        "type-c",
+        "충전",
+        "충전 출력",
+    ]
+    for key in key_priority:
+        for spec_key, spec_value in specs.items():
+            if key in spec_key:
+                watt = parse_usb_c_pd_watt(f"{spec_key} {spec_value}".lower())
+                if watt is not None:
+                    return watt
     return None
 
 
 def parse_detail_specs(detail_html: str) -> tuple[int | None, str | None, str | None]:
+    specs = extract_structured_specs(detail_html)
     detail_text = text_of(detail_html).lower()
-    usb_c_pd_watt = parse_usb_c_pd_watt(detail_text)
-    vesa_mount_mm = parse_vesa_mount(detail_text)
+
+    # PD parsing priority:
+    # 1) Structured specs/table
+    # 2) Explicit keyword context
+    # 3) Global text fallback
+    usb_c_pd_watt = parse_pd_from_structured_specs(specs)
+    if usb_c_pd_watt is None:
+        keyword_text = " ".join(
+            re.findall(
+                r"(?:usb[\s\-]?c|type[\s\-]?c|power\s*delivery|pd|충전)[^.]{0,120}",
+                detail_text,
+                flags=re.IGNORECASE,
+            )
+        ).lower()
+        usb_c_pd_watt = parse_usb_c_pd_watt(keyword_text) if keyword_text else None
+    if usb_c_pd_watt is None:
+        usb_c_pd_watt = parse_usb_c_pd_watt(detail_text)
+
+    vesa_mount_mm = None
+    for spec_key, spec_value in specs.items():
+        if "vesa" in spec_key or "베사" in spec_key:
+            vesa_mount_mm = parse_vesa_mount(f"{spec_key} {spec_value}".lower())
+            if vesa_mount_mm:
+                break
+    if vesa_mount_mm is None:
+        vesa_mount_mm = parse_vesa_mount(detail_text)
+
     image_url = parse_image_url(detail_html)
     return usb_c_pd_watt, vesa_mount_mm, image_url
 
@@ -173,7 +281,8 @@ def enrich_products_with_detail(products: list[dict]) -> list[dict]:
             try:
                 detail_html = fetch_html(url)
                 detail_cache[url] = parse_detail_specs(detail_html)
-            except Exception:
+            except Exception as exc:
+                logger.warning("Detail parsing failed name=%s url=%s err=%s", product.get("name"), url, exc)
                 detail_cache[url] = (None, None, None)
 
         detail_pd, detail_vesa, detail_image = detail_cache[url]
@@ -187,6 +296,7 @@ def enrich_products_with_detail(products: list[dict]) -> list[dict]:
 
 
 def main() -> int:
+    configure_logging()
     all_products: list[dict] = []
     for query in QUERIES:
         url = "https://search.danawa.com/dsearch.php?" + urllib.parse.urlencode(
