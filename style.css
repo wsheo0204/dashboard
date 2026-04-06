@@ -76,12 +76,27 @@ button {
 
 .thumb {
   width: 100%;
-  max-height: 220px;
+  height: 220px;
   object-fit: contain;
   background: #f8fafc;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   margin-bottom: 10px;
+}
+
+.thumb-shell {
+  margin-bottom: 10px;
+}
+
+.thumb-placeholder {
+  height: 220px;
+  display: grid;
+  place-items: center;
+  color: #6b7280;
+  background: #f8fafc;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
 }
 
 .meta {
