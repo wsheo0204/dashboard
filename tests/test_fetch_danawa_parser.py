@@ -29,6 +29,21 @@ class ParserTests(unittest.TestCase):
         )
         self.assertEqual(fetch_danawa.parse_image_url(html), "https://cdn.example.com/tw.jpg")
 
+    def test_parse_detail_specs_mobile_like_pd_and_lazy_image(self):
+        html = """
+        <ul class="spec_list">
+          <li><span class="tit">USB-C</span><span class="txt">PD 충전 최대 65와트</span></li>
+        </ul>
+        <img class="swiper-lazy" data-original="//cdn.example.com/mobile-main.jpg" />
+        """
+        pd_watt, _, image_url = fetch_danawa.parse_detail_specs(html)
+        self.assertEqual(pd_watt, 65)
+        self.assertEqual(image_url, "https://cdn.example.com/mobile-main.jpg")
+
+    def test_parse_image_url_from_json_ld(self):
+        html = '<script type="application/ld+json">{"image":"https:\\/\\/cdn.example.com\\/json.jpg"}</script>'
+        self.assertEqual(fetch_danawa.parse_image_url(html), "https://cdn.example.com/json.jpg")
+
 
 if __name__ == "__main__":
     unittest.main()
