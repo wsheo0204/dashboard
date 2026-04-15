@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-14T19:17:04+00:00",
+  "updated_at": "2026-04-15T02:34:37+00:00",
   "query": "27인치 4k usb-c 모니터",
   "queries": [
     "27인치 4k usb-c 모니터",
@@ -55,7 +55,7 @@
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
       "url": "https://prod.danawa.com/info/?pcode=104307404&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&cate=112757",
-      "image_url": "https://img.danuri.io/catalog-image/404/307/104/0a91646a894149e9af9a8336f289c886.jpg?shrink=160:160&_v=20260414174453"
+      "image_url": "https://img.danuri.io/catalog-image/404/307/104/0a91646a894149e9af9a8336f289c886.jpg?shrink=160:160&_v=20260415063918"
     },
     {
       "name": "삼성 27인치 M70C 시리즈 4K UHD USB-C 스마트 모니터 및 스트리밍 TV 4ms 60Hz HDR10 무선 디스플레이",
@@ -65,7 +65,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=149&cate_c2=180&cate_c3=15527&cate_c4=0&cmpny_c=TH201&link_prod_c=9251011521&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761941966432&cate=10248425",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=149&cate_c2=180&cate_c3=15527&cate_c4=0&cmpny_c=TH201&link_prod_c=9251011521&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204453896&cate=10248425",
       "image_url": null
     },
     {
@@ -98,7 +98,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": 90,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TH201&link_prod_c=8455794978&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942018884&cate=112757",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TH201&link_prod_c=8455794978&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204519273&cate=112757",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -120,30 +120,19 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=862&cate_c2=10621&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=8934197120&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942018733",
-      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
-    },
-    {
-      "name": "[호환] 컬러 27인치 4K 60Hz 모니터 LG IPS 스크린 97% DCI-P3 USB-C 전원 MacPC 호환 알루미늄 합금 금속 소재",
-      "brand": "LG",
-      "price": 629570,
-      "size_inch": 27,
-      "resolution": "3840x2160",
-      "usb_c_pd_watt": null,
-      "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=EE715&link_prod_c=F468030441&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942018110",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=862&cate_c2=10621&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=8934197120&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204515551",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
       "name": "[해외] LG 27U730A-B Type-C(USB 모니터 디스플레이 27인치 4K (3840×2160)IPSDCI-P3",
       "brand": "LG",
-      "price": 634070,
+      "price": 652750,
       "size_inch": 27,
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TP40F&link_prod_c=V94262999641&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942016046",
-      "image_url": null
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9184116931&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204516593",
+      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
       "name": "LG Electronics [해외] [아마존 공식] LG Ultrafine 27인치 4K UHD IPS 모니터 , HDR10, VESA DisplayHDR 400, AMD FreeSync 및 USB Type-C 90W",
@@ -153,7 +142,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=8353278063&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942018177",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=8353278063&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204516096",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -164,7 +153,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195336383&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761941965355",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195336383&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204458107",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -175,7 +164,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TH201&link_prod_c=9195340147&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942017681&cate=112757",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TH201&link_prod_c=9195340147&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204518976&cate=112757",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -186,7 +175,18 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=880&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I28068570717&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761941968632&cate=112777",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=880&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I28068570717&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204454382&cate=112777",
+      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
+    },
+    {
+      "name": "[해외] 27인치 4K 60Hz LG IPS 패널 100% sRGB USB-C 맥 호환 디자인 사진 편집용 알루미늄 합금 소재 몸체 모니터 02 Aluminum Alloy Stand",
+      "brand": "LG",
+      "price": 935500,
+      "size_inch": 27,
+      "resolution": "3840x2160",
+      "usb_c_pd_watt": null,
+      "vesa_mount_mm": null,
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TP40F&link_prod_c=V94496865115&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204517630",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -197,7 +197,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": 26,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195344481&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942019080",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195344481&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204515279",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -219,7 +219,18 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195336574&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942019159",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9195336574&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204516321",
+      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
+    },
+    {
+      "name": "[해외] LG 27UP850-W 모니터 27인치 UHD(3840 x 2160) IPS 디스플레이 VESA DisplayHDR 400 DCI-P3 95% 색재현율 USB-C 3면 전력 공급",
+      "brand": "LG",
+      "price": 1014000,
+      "size_inch": 27,
+      "resolution": "3840x2160",
+      "usb_c_pd_watt": null,
+      "vesa_mount_mm": null,
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TP40F&link_prod_c=V94951581570&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204512520",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -230,7 +241,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=0&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9241830546&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761941962969",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=0&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9241830546&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204452194",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -241,7 +252,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": 27,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TP40F&link_prod_c=V94400441751&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942014975&cate=112757",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TP40F&link_prod_c=V94400441751&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204516203&cate=112757",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -252,7 +263,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=9218634835&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942014805",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=9218634835&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204518922",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -263,18 +274,7 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9163387358&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761941967636",
-      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
-    },
-    {
-      "name": "상세설명참조 LG 27UP850-W 모니터 27인치 UHD (3840 x 2160) IPS 디스플레이 VESA HDR 400 DCI-P3 95 색역 USB-C 3면",
-      "brand": "LG",
-      "price": 1209030,
-      "size_inch": 27,
-      "resolution": "3840x2160",
-      "usb_c_pd_watt": null,
-      "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58972&cmpny_c=TH201&link_prod_c=9177142588&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761942017012&cate=112757",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9163387358&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204456185",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
@@ -285,7 +285,18 @@
       "resolution": "3840x2160",
       "usb_c_pd_watt": null,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9082983183&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17761941969361",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9082983183&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204457477",
+      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
+    },
+    {
+      "name": "[해외] 27인치 4K 144Hz LG 나노 IPS 모니터 99% DCI-P3 색재현율 30001 대비 3840x2160 USB-C HDMI DP 알루미늄 합금 금속 재질 본체 [01]",
+      "brand": "LG",
+      "price": 1256950,
+      "size_inch": 27,
+      "resolution": "3840x2160",
+      "usb_c_pd_watt": null,
+      "vesa_mount_mm": null,
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=1840&cate_c2=9741&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I27350238707&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17762204512185",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     }
   ]
