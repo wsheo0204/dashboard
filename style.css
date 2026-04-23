@@ -99,6 +99,11 @@ button {
   font-size: 0.9rem;
 }
 
+.thumb[hidden],
+.thumb-placeholder[hidden] {
+  display: none !important;
+}
+
 .meta {
   color: #4b5563;
   font-size: 0.92rem;
