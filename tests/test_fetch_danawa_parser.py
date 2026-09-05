@@ -59,6 +59,36 @@ class ParserTests(unittest.TestCase):
         )
         self.assertEqual(image_url, "https://prod.danawa.com/img/main.jpg")
 
+    def test_parse_products_excludes_overseas_items(self):
+        html = """
+        <ul>
+          <li class="prod_item">
+            <p class="prod_name"><a href="https://prod.danawa.com/info/?pcode=1">국내 모델 27인치 4K USB-C</a></p>
+            <div class="price_sect"><strong>300,000</strong></div>
+            <div class="prod_spec_set">27인치 / 3840x2160 / USB-C</div>
+          </li>
+          <li class="prod_item">
+            <p class="prod_name"><a href="https://prod.danawa.com/info/?pcode=2">해외구매 모델 27인치 4K USB-C</a></p>
+            <div class="price_sect"><strong>310,000</strong></div>
+            <div class="prod_spec_set">27인치 / 3840x2160 / USB-C / 해외구매</div>
+          </li>
+        </ul>
+        """
+        parsed = fetch_danawa.parse_products(html)
+        self.assertEqual(len(parsed), 1)
+        self.assertIn("국내 모델", parsed[0]["name"])
+
+    def test_parse_detail_specs_extracts_pd_from_script_json(self):
+        html = """
+        <script>
+          window.__STATE__ = {
+            "pd충전":"최대 65W"
+          };
+        </script>
+        """
+        pd_watt, _, _ = fetch_danawa.parse_detail_specs(html)
+        self.assertEqual(pd_watt, 65)
+
 
 if __name__ == "__main__":
     unittest.main()
