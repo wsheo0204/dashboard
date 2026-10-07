@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T04:35:54+00:00",
+  "updated_at": "2026-10-07T12:45:20+00:00",
   "query": "27인치 4k usb-c 모니터",
   "queries": [
     "27인치 4k usb-c 모니터",
@@ -67,17 +67,6 @@
       "vesa_mount_mm": null,
       "url": "https://prod.danawa.com/info/?pcode=86537804&keyword=27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0",
       "image_url": "https://img.danuri.io/catalog-image/804/537/086/0880baf951674d619b248e1e720739a0.jpg?shrink=160:160&_v=20261007080432"
-    },
-    {
-      "name": "[중고] LG 전자 27UD88 4K UHD 27인치 IPS 광시야각 16:9 HDMIDPUSB-C지원",
-      "brand": "LG",
-      "price": 219000,
-      "size_inch": 27,
-      "resolution": "3840x2160",
-      "usb_c_pd_watt": null,
-      "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=EE128&link_prod_c=3916120517&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17913477295445",
-      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     },
     {
       "name": "이노스 27UA120M UHD IPS USB-C HDR Ai GEN 게이밍 멀티스탠드",
@@ -190,50 +179,6 @@
       "image_url": "https://img.danuri.io/catalog-image/837/398/108/bf402e3100eb4b718da2f1054444592f.jpg?shrink=160:160&_v=20261007080322"
     },
     {
-      "name": "컬러 27인치 4K 60Hz 모니터 LG IPS 스크린 97% DCI-P3 USB-C 전원 MacPC 호환 알루미늄 합금 금속 소재",
-      "brand": "LG",
-      "price": 642150,
-      "size_inch": 27,
-      "resolution": "3840x2160",
-      "usb_c_pd_watt": null,
-      "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=862&cate_c2=10621&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=8976571373&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17913477296959",
-      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
-    },
-    {
-      "name": "[해외] LG 27U730A-B Type-C(USB 모니터 디스플레이 27인치 4K (3840×2160)IPSDCI-P3",
-      "brand": "LG",
-      "price": 651290,
-      "size_inch": 27,
-      "resolution": "3840x2160",
-      "usb_c_pd_watt": null,
-      "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9184116931&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17913477297130",
-      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
-    },
-    {
-      "name": "[해외] [관부가세포함] LG 27UK850-W 27인치 4K UHD IPS 모니터 HDR10 USB Type-C 연",
-      "brand": "LG",
-      "price": 688950,
-      "size_inch": 27,
-      "resolution": "3840x2160",
-      "usb_c_pd_watt": null,
-      "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9331573133&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17913477294987",
-      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
-    },
-    {
-      "name": "LG 전자 27인치 4K UHD IPS LG 모니터 USB-C 90W HDR400 높낮이조절 피벗",
-      "brand": "LG",
-      "price": 721200,
-      "size_inch": 27,
-      "resolution": "3840x2160",
-      "usb_c_pd_watt": 137,
-      "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TW7249&link_prod_c=13733581705&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17913477294071",
-      "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
-    },
-    {
       "name": "알파스캔 에이건 AGON 276UZD 게이밍 UHD OLED 240 USB-C HDR 400 무결점",
       "brand": "알파스캔",
       "price": 913710,
@@ -245,14 +190,14 @@
       "image_url": "https://img.danuri.io/catalog-image/288/050/099/f0559f3352ef4484b8b184d8205f1f0c.jpg?shrink=160:160&_v=20261007080549"
     },
     {
-      "name": "lg ultrafine 27인치 4k uhd ips type-c 90w freesync 모니터 , 화이트 및 가능한 usb 기울기/높이/피벗 vesa 스탠드, 내장 디스플레이 amd",
-      "brand": "LG",
-      "price": 1167840,
+      "name": "삼성 27인치 오디세이 OLED G8 G80SH 게이밍 모니터 - QD-OLED 4K 해상도 240Hz USB-C 96W DP 2.1 0.03ms",
+      "brand": "Samsung",
+      "price": 2841950,
       "size_inch": 27,
       "resolution": "3840x2160",
-      "usb_c_pd_watt": 90,
+      "usb_c_pd_watt": 96,
       "vesa_mount_mm": null,
-      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=0&cmpny_c=TH201&link_prod_c=9218634835&keyword=LG+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17913477295448",
+      "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14883&cate_c4=58973&cmpny_c=TH201&link_prod_c=9414899253&keyword=%EC%82%BC%EC%84%B1+27%EC%9D%B8%EC%B9%98+4k+usb-c+%EB%AA%A8%EB%8B%88%ED%84%B0&r=17913770879750",
       "image_url": "https://img.danawa.com/new/common/loadingBridge/img/logo.jpg"
     }
   ]
